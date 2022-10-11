@@ -5,7 +5,9 @@ import {
     FormikBasicPage,
     FormikComponents,
     FormikYupPage,
-    RegisterPage
+    RegisterPage,
+    RegisterFormikPage,
+    DynamicForm
 } from "../03-forms/pages"
 
 import react from '../assets/react.svg'
@@ -32,6 +34,12 @@ export const Navitagion = () => {
                         <li>
                             <NavLink to="/formik-abstractation" className={({ isActive }) => isActive ? 'nav-active' : ''}>formik abstractation</NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/formik-register" className={({ isActive }) => isActive ? 'nav-active' : ''}>Register Formik</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dynamic-form" className={({ isActive }) => isActive ? 'nav-active' : ''}>Dynamic Form</NavLink>
+                        </li>
                     </ul>
                 </nav>
 
@@ -41,6 +49,8 @@ export const Navitagion = () => {
                     <Route path="formik-yup" element={<FormikYupPage />} />
                     <Route path="formik-components" element={<FormikComponents />} />
                     <Route path="formik-abstractation" element={<FormikAbstractations />} />
+                    <Route path="formik-register" element={<RegisterFormikPage />} />
+                    <Route path="dynamic-form" element={<DynamicForm />} />
                     <Route path="about" element={<h1>About Page</h1>} />
                     <Route path="users" element={<h1>Users Page</h1>} />
                     <Route path="home" element={<h1>Home Page</h1>} />
